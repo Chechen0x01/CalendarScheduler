@@ -2,7 +2,6 @@
 
 use app\services\PageBuilder;
 
-
 ?>
 
 <!doctype html>

@@ -1,6 +1,6 @@
 <?php
 
 return [
-    '/' => 'calendar',
-    '/login' => 'login'
+    '/' => 'calendar.php',
+    '/login' => 'login.php'
 ];

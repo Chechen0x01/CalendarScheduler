@@ -2,8 +2,6 @@
 
 namespace app\services;
 
-use JetBrains\PhpStorm\NoReturn;
-
 class Router
 {
     private static array $routes = [];
@@ -22,7 +20,7 @@ class Router
         foreach (self::$routes as $route) {
             if ($route['uri'] === $query) {
                 $_GET['query'] = '';
-                require_once 'views/' . $route['page'] . '.php';
+                require_once 'views/' . $route['page'];
                 die();
             }
         }
@@ -36,7 +34,7 @@ class Router
         }
         if (!empty($overlap)) {
             $_GET['query'] = mb_substr($query, mb_strlen($overlap['uri']) + 1);
-            require_once 'views/' . $overlap['page'] . '.php';
+            require_once 'views/' . $overlap['page'];
             die();
         }
         echo '404: Page not found'; //TODO add error page

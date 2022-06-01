@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'rb-mysql'
+    'ActiveRecord.php'
 ];
